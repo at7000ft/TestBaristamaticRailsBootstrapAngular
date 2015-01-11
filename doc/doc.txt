@@ -1,0 +1,40 @@
+#
+# Turn off turbolinks
+Remove the gem 'turbolinks' line from your Gemfile.
+Remove the //= require turbolinks from your app/assets/javascripts/application.js.
+Remove the two "data-turbolinks-track" => true hash key/value pairs from your app/views/layouts/application.html.erb.
+
+#
+#MongoDB Model generation
+# variable types -
+Array, Float, Hash, Integer, NilClass, Object, String,  Time, Binary, Boolean, Date, ObjectId, and Set
+
+rails g model Drink number:integer name:string displayName:string
+
+#
+# Using MongoMapper or Mongoid with Rails
+http://blog.mongodb.org/post/53271876885/ruby-rails-mongodb-and-the-object-relational
+http://mongomapper.com/documentation/getting-started/rails.html
+http://www.bitzesty.com/blog/2014/7/mongodb-with-mongomapper-and-ruby-on-rails
+
+
+#
+# View app routes in browser (ONLY visible in the development environment)
+http://localhost:3000/rails/info/routes
+
+#
+# Rails - Angular setup
+http://www.intridea.com/blog/2014/9/25/how-to-set-up-angular-with-rails
+http://start.jcolemorrison.com/setting-up-an-angularjs-and-rails-4-1-project/
+
+
+#
+# Using Bower with Rails
+http://dotwell.io/taking-advantage-of-bower-in-your-rails-4-app/
+# Update all vendor javascript and css by running (everything loaded into vendor/assets/components, as specified in .bowerrc):
+bower update
+
+#
+# A simple json echo server, returns the last two url elements your pass in as a single key:value
+http://echo.jsontest.com/conditions/frightful   # Returns '{"conditions": "frightful"}'
+

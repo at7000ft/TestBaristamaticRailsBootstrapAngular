@@ -1,0 +1,14 @@
+<%# Title: index.html.erb %>
+<%# Angular Main page %>
+<%# When this page is loaded in the browser the ng-app annotation will auto-start the Angular application 'Baristamatic' %>
+<%# defined in app/assets/javascripts/barista-app/app.js (all files in app/asserts/javascripts are auto loaded by the asset pipeline in layouts/application.html.erb %>
+<%# Angular templates are loaded into the ng-view area based on selected url by the angular routing module setup in app.js %>
+<%# Author: RH %>
+
+
+<div ng-app='Baristamatic' class="container">
+    <!-- ng-view is used by the ngRoute module to load html views here based on url -->
+    <!-- In this case the Inventory and Drink table views will be loaded (only a single set of views are used for this app) -->
+    <ng-view> </ng-view>
+</div>
+

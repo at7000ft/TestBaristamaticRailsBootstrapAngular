@@ -1,0 +1,28 @@
+#
+# Control flow for TestBaristamaticRailsBootstrapAngular (a single page webapp)
+#
+
+1) Application is accessed at: http://<host>:3000 or http://<host>:3000/baristamtic
+2) Rails routes this url to controllers/BaristamaticController and render view views/baristamatic/index.html.erb
+   - A div on this page is set to ng-app='Baristamatic' directive which auto-bootstraps the AngularJS application
+     by creating the angular.module('Baristamatic') module defined in app.js and running its config with routing.
+     All this happens on the browser when this page loads.
+   - The <ng-view> </ng-view> directive on this page works with the $routeProvider in app.js to load the appropriate
+     template (from app/assets/javascripts/templates) based on the browser url entered.
+   - The Rails layout views/layouts/application.html.erb wraps index.html.erb with all js and css in app/assets
+     which includes all Angular controllers/services/directives/templates via asset pipeline.
+   - The routing in app.js causes app/javascript/templates/baristamatic.html to be loaded first into the <ng-view> div
+     of views/baristamatic/index.html.erb whenever http://<host>:3000 or http://<host>:3000/baristamtic url is entered.
+   - The Angular controller baristamaticCntl.js is attached to the DOM at the first <div> in baristamatic.html. It contains
+     the 'buy' and 'reStockInventory' functions which are called on user clicks to call Rails server rest/json methods. These
+     functions call 'inventory' and 'drinks' functions to update inventory and drink state via rest/json calls to Rails
+     which is automatically modified on the page with the data binding.
+
+3) The Baristamatic Angular application is now running in the browser with all needed artifacts. The only request now
+   made back to the Rails server is rest/json api requests which are routed to controllers/api/v1/baristamatic_controller.rb
+   for buy, reload inventory, and inventory and drink status requests.
+
+4) With the app running the user can select About, Blog and Contact from the nav bar with the ngRoute routing setup in app.js
+   will load about.html, blog.html, or contact.html template into the <ng-view> div (no requests made back to Rails server).
+
+
