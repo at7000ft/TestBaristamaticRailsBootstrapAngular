@@ -44,7 +44,7 @@
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="dataSourceStorageLocal">
     <data-source name="Rails TestBaristamaticRailsBootstrapAngular: development" uuid="8f3b4363-6a6d-4167-9fec-794dec231558" />
