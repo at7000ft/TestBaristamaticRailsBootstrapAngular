@@ -38,7 +38,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'mongo_mapper'
+#gem 'mongo_mapper'
 gem 'bson_ext'
 
 gem 'angular-rails-templates'
